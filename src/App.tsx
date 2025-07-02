@@ -10,6 +10,12 @@ import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
+// Import admin pages
+import AdminNoticias from "./pages/AdminNoticias";
+import AdminNoticiaForm from "./pages/AdminNoticiaForm";
+import AdminPaginas from "./pages/AdminPaginas";
+import AdminProposicoes from "./pages/AdminProposicoes";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -23,6 +29,16 @@ const App = () => (
           <Route path="/vereadores" element={<Vereadores />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
+          
+          {/* Admin routes for content management */}
+          <Route path="/admin/noticias" element={<AdminNoticias />} />
+          <Route path="/admin/noticias/nova" element={<AdminNoticiaForm />} />
+          <Route path="/admin/noticias/:id/editar" element={<AdminNoticiaForm />} />
+          
+          <Route path="/admin/paginas" element={<AdminPaginas />} />
+          
+          <Route path="/admin/proposicoes" element={<AdminProposicoes />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
