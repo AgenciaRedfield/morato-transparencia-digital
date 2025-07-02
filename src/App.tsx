@@ -15,6 +15,9 @@ import AdminNoticias from "./pages/AdminNoticias";
 import AdminNoticiaForm from "./pages/AdminNoticiaForm";
 import AdminPaginas from "./pages/AdminPaginas";
 import AdminProposicoes from "./pages/AdminProposicoes";
+import AdminMesaDiretora from "./pages/AdminMesaDiretora";
+import AdminLegislaturas from "./pages/AdminLegislaturas";
+import AdminUsuarios from "./pages/AdminUsuarios";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +41,11 @@ const App = () => (
           <Route path="/admin/paginas" element={<AdminPaginas />} />
           
           <Route path="/admin/proposicoes" element={<AdminProposicoes />} />
+          
+          {/* Admin routes for people management */}
+          <Route path="/admin/mesa-diretora" element={<AdminMesaDiretora />} />
+          <Route path="/admin/legislaturas" element={<AdminLegislaturas />} />
+          <Route path="/admin/usuarios" element={<AdminUsuarios />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
