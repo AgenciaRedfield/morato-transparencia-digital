@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Search, Phone, Mail, Clock } from 'lucide-react';
+import { Menu, X, Search, Phone, Mail, Clock, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Navigation from './Navigation';
@@ -72,6 +73,16 @@ const Header = () => {
               >
                 Alto Contraste
               </Button>
+              <Link to="/login">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-white hover:bg-blue-800 text-xs flex items-center gap-1"
+                >
+                  <Settings className="h-3 w-3" />
+                  Admin
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
