@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg">
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white">
+      <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-2">
           <div className="flex flex-wrap items-center justify-between text-sm">
             <div className="flex items-center space-x-4">
@@ -53,7 +53,7 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={decreaseFontSize}
-                className="text-white hover:bg-blue-800 text-xs"
+                className="text-primary-foreground hover:bg-primary/80 text-xs"
               >
                 A-
               </Button>
@@ -61,7 +61,7 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={increaseFontSize}
-                className="text-white hover:bg-blue-800 text-xs"
+                className="text-primary-foreground hover:bg-primary/80 text-xs"
               >
                 A+
               </Button>
@@ -69,7 +69,7 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={toggleContrast}
-                className="text-white hover:bg-blue-800 text-xs"
+                className="text-primary-foreground hover:bg-primary/80 text-xs"
               >
                 Alto Contraste
               </Button>
@@ -77,7 +77,7 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-white hover:bg-blue-800 text-xs flex items-center gap-1"
+                  className="text-primary-foreground hover:bg-primary/80 text-xs flex items-center gap-1"
                 >
                   <Settings className="h-3 w-3" />
                   Admin
@@ -93,16 +93,18 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center space-x-4">
-            <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">FM</span>
-              </div>
+            <div className="w-20 h-20 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/c57ac1d3-9172-4e1d-94b9-22353c11f210.png" 
+                alt="Brasão de Francisco Morato" 
+                className="w-20 h-20 object-contain"
+              />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-blue-900">
+              <h1 className="text-2xl font-bold text-primary">
                 Câmara Municipal
               </h1>
-              <p className="text-blue-700 text-lg">Francisco Morato</p>
+              <p className="text-primary/80 text-lg">Francisco Morato</p>
               <p className="text-gray-600 text-sm">Estado de São Paulo</p>
             </div>
           </div>
@@ -117,7 +119,7 @@ const Header = () => {
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-primary hover:bg-primary/90">
               Buscar
             </Button>
           </div>
