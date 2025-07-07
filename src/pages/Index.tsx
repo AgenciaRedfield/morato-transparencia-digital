@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import FeaturedNewsCarousel from '@/components/home/FeaturedNewsCarousel';
 import NewsSection from '@/components/home/NewsSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import QuickAccessSection from '@/components/home/QuickAccessSection';
@@ -13,6 +14,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <FeaturedNewsCarousel />
         <ServicesSection />
         <NewsSection />
         <QuickAccessSection />
