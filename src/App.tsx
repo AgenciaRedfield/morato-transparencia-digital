@@ -18,6 +18,12 @@ import AdminProposicoes from "./pages/AdminProposicoes";
 import AdminMesaDiretora from "./pages/AdminMesaDiretora";
 import AdminLegislaturas from "./pages/AdminLegislaturas";
 import AdminUsuarios from "./pages/AdminUsuarios";
+import AdminVereadores from "./pages/AdminVereadores";
+import AdminTransparencia from "./pages/AdminTransparencia";
+import AdminSimbolos from "./pages/AdminSimbolos";
+import AdminOuvidoria from "./pages/AdminOuvidoria";
+import AdminFormularios from "./pages/AdminFormularios";
+import AdminConfiguracoes from "./pages/AdminConfiguracoes";
 
 const queryClient = new QueryClient();
 
@@ -43,9 +49,17 @@ const App = () => (
           <Route path="/admin/proposicoes" element={<AdminProposicoes />} />
           
           {/* Admin routes for people management */}
+          <Route path="/admin/vereadores" element={<AdminVereadores />} />
           <Route path="/admin/mesa-diretora" element={<AdminMesaDiretora />} />
           <Route path="/admin/legislaturas" element={<AdminLegislaturas />} />
           <Route path="/admin/usuarios" element={<AdminUsuarios />} />
+          
+          {/* Admin routes for transparency and forms */}
+          <Route path="/admin/transparencia" element={<AdminTransparencia />} />
+          <Route path="/admin/simbolos" element={<AdminSimbolos />} />
+          <Route path="/admin/ouvidoria" element={<AdminOuvidoria />} />
+          <Route path="/admin/formularios" element={<AdminFormularios />} />
+          <Route path="/admin/configuracoes" element={<AdminConfiguracoes />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
