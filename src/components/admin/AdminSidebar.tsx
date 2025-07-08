@@ -12,7 +12,8 @@ import {
   FileDown, 
   Award,
   Settings,
-  User
+  User,
+  Calendar
 } from 'lucide-react';
 
 const AdminSidebar = () => {
@@ -25,6 +26,7 @@ const AdminSidebar = () => {
     { path: '/admin/legislaturas', icon: Scale, label: 'Legislaturas' },
     { path: '/admin/proposicoes', icon: FileText, label: 'Proposições' },
     { path: '/admin/noticias', icon: Newspaper, label: 'Notícias' },
+    { path: '/admin/agenda', icon: Calendar, label: 'Agenda' },
     { path: '/admin/paginas', icon: FileText, label: 'Páginas' },
     { path: '/admin/transparencia', icon: Eye, label: 'Transparência' },
     { path: '/admin/simbolos', icon: Award, label: 'Símbolos Oficiais' },

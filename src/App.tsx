@@ -24,6 +24,7 @@ import AdminSimbolos from "./pages/AdminSimbolos";
 import AdminOuvidoria from "./pages/AdminOuvidoria";
 import AdminFormularios from "./pages/AdminFormularios";
 import AdminConfiguracoes from "./pages/AdminConfiguracoes";
+import AdminAgenda from "./pages/AdminAgenda";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/admin/noticias/:id/editar" element={<AdminNoticiaForm />} />
           
           <Route path="/admin/paginas" element={<AdminPaginas />} />
+          <Route path="/admin/agenda" element={<AdminAgenda />} />
           
           <Route path="/admin/proposicoes" element={<AdminProposicoes />} />
           

@@ -14,6 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
+      agenda: {
+        Row: {
+          autor_id: string
+          created_at: string
+          data_evento: string
+          descricao: string | null
+          hora_fim: string | null
+          hora_inicio: string | null
+          id: string
+          local: string | null
+          publico: boolean
+          status: string
+          tipo_evento: string
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          autor_id: string
+          created_at?: string
+          data_evento: string
+          descricao?: string | null
+          hora_fim?: string | null
+          hora_inicio?: string | null
+          id?: string
+          local?: string | null
+          publico?: boolean
+          status?: string
+          tipo_evento?: string
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          autor_id?: string
+          created_at?: string
+          data_evento?: string
+          descricao?: string | null
+          hora_fim?: string | null
+          hora_inicio?: string | null
+          id?: string
+          local?: string | null
+          publico?: boolean
+          status?: string
+          tipo_evento?: string
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       audit_logs: {
         Row: {
           action: string
