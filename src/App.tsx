@@ -25,6 +25,11 @@ import AdminOuvidoria from "./pages/AdminOuvidoria";
 import AdminFormularios from "./pages/AdminFormularios";
 import AdminConfiguracoes from "./pages/AdminConfiguracoes";
 import AdminAgenda from "./pages/AdminAgenda";
+import AdminAgendaForm from "./pages/AdminAgendaForm";
+import AdminVereadoresForm from "./pages/AdminVereadoresForm";
+import AdminTransparenciaForm from "./pages/AdminTransparenciaForm";
+import AdminSimbolosForm from "./pages/AdminSimbolosForm";
+import AdminFormulariosForm from "./pages/AdminFormulariosForm";
 
 const queryClient = new QueryClient();
 
@@ -47,20 +52,30 @@ const App = () => (
           
           <Route path="/admin/paginas" element={<AdminPaginas />} />
           <Route path="/admin/agenda" element={<AdminAgenda />} />
+          <Route path="/admin/agenda/novo" element={<AdminAgendaForm />} />
+          <Route path="/admin/agenda/:id/editar" element={<AdminAgendaForm />} />
           
           <Route path="/admin/proposicoes" element={<AdminProposicoes />} />
           
           {/* Admin routes for people management */}
           <Route path="/admin/vereadores" element={<AdminVereadores />} />
+          <Route path="/admin/vereadores/novo" element={<AdminVereadoresForm />} />
+          <Route path="/admin/vereadores/:id/editar" element={<AdminVereadoresForm />} />
           <Route path="/admin/mesa-diretora" element={<AdminMesaDiretora />} />
           <Route path="/admin/legislaturas" element={<AdminLegislaturas />} />
           <Route path="/admin/usuarios" element={<AdminUsuarios />} />
           
           {/* Admin routes for transparency and forms */}
           <Route path="/admin/transparencia" element={<AdminTransparencia />} />
+          <Route path="/admin/transparencia/novo" element={<AdminTransparenciaForm />} />
+          <Route path="/admin/transparencia/:id/editar" element={<AdminTransparenciaForm />} />
           <Route path="/admin/simbolos" element={<AdminSimbolos />} />
+          <Route path="/admin/simbolos/novo" element={<AdminSimbolosForm />} />
+          <Route path="/admin/simbolos/:id/editar" element={<AdminSimbolosForm />} />
           <Route path="/admin/ouvidoria" element={<AdminOuvidoria />} />
           <Route path="/admin/formularios" element={<AdminFormularios />} />
+          <Route path="/admin/formularios/novo" element={<AdminFormulariosForm />} />
+          <Route path="/admin/formularios/:id/editar" element={<AdminFormulariosForm />} />
           <Route path="/admin/configuracoes" element={<AdminConfiguracoes />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
